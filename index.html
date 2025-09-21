@@ -2,7 +2,9 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>أزرار مع قمر ونجوم</title>
+  <title>روابطي الرسمية</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -17,41 +19,52 @@
       color: white;
     }
 
-    /* القمر */
-    body::before {
-      content: "";
+    /* 🌙 القمر */
+    .moon {
       position: absolute;
-      top: 60px;
-      right: 100px;
-      width: 120px;
-      height: 120px;
-      background: radial-gradient(circle, #fff 60%, #ddd 100%);
+      top: 40px;
+      left: 60px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, #fff 65%, #ddd 100%);
       border-radius: 50%;
-      box-shadow: 0 0 40px rgba(255,255,200,0.6);
+      box-shadow: 0 0 80px rgba(255,255,200,0.9);
     }
 
-    /* النجوم */
+    /* ⭐ النجوم */
     .star {
       position: absolute;
-      width: 2px;
-      height: 2px;
+      width: 3px;
+      height: 3px;
       background: white;
       border-radius: 50%;
+      box-shadow: 0 0 10px white;
       animation: twinkle 2s infinite alternate;
     }
 
     @keyframes twinkle {
-      from { opacity: 0.2; }
-      to   { opacity: 1; }
+      from { opacity: 0.2; transform: scale(1); }
+      to   { opacity: 1; transform: scale(1.5); }
+    }
+
+    /* 🔘 الأزرار */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 10;
+    }
+
+    li {
+      margin: 12px 0;
     }
 
     a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 220px;
+      width: 240px;
       padding: 14px;
-      margin: 10px;
       border-radius: 8px;
       font-size: 22px;
       text-decoration: none;
@@ -59,38 +72,60 @@
       border: 2px solid white;
       color: white;
       gap: 10px;
-      position: relative;
-      z-index: 10;
+    }
+
+    a i {
+      font-size: 24px;
     }
 
     a:hover {
       transform: scale(1.1);
-      box-shadow: 0 0 20px currentColor;
+      box-shadow: 0 0 25px currentColor;
     }
 
+    /* 🎨 ألوان glow حسب التطبيق */
     .instagram { color: #E4405F; }
-    .facebook { color: #1877F2; }
-    .whatsapp { color: #25D366; }
-    .tiktok { color: #fff; }
+    .facebook  { color: #1877F2; }
+    .snapchat  { color: #FFFC00; color: #000; }
+    .whatsapp  { color: #25D366; }
+    .telegram  { color: #0088cc; }
+    .threads   { color: #ffffff; }
+    .phone     { color: #aaa; }
+    .email     { color: #EA4335; }
   </style>
 </head>
 <body>
 
-  <!-- أزرار -->
-  <a href="#" class="instagram">📸 Instagram</a>
-  <a href="#" class="facebook">📘 Facebook</a>
-  <a href="#" class="whatsapp">💬 WhatsApp</a>
-  <a href="#" class="tiktok">🎵 TikTok</a>
+  <!-- 🌙 القمر -->
+  <div class="moon"></div>
 
-  <!-- توليد نجوم -->
-  <div class="star" style="top:20px; left:30px;"></div>
-  <div class="star" style="top:100px; left:200px;"></div>
-  <div class="star" style="top:300px; left:150px;"></div>
-  <div class="star" style="top:400px; left:400px;"></div>
-  <div class="star" style="top:250px; left:600px;"></div>
-  <div class="star" style="top:50px; left:700px;"></div>
-  <div class="star" style="top:500px; left:900px;"></div>
-  <div class="star" style="top:150px; left:1100px;"></div>
+  <!-- ⭐ نجوم -->
+  <div class="star" style="top:20px; left:200px;"></div>
+  <div class="star" style="top:80px; left:400px;"></div>
+  <div class="star" style="top:150px; left:700px;"></div>
+  <div class="star" style="top:50px; left:1000px;"></div>
+  <div class="star" style="top:250px; left:120px;"></div>
+  <div class="star" style="top:350px; left:500px;"></div>
+  <div class="star" style="top:500px; left:300px;"></div>
+  <div class="star" style="top:600px; left:800px;"></div>
+  <div class="star" style="top:450px; left:1100px;"></div>
+  <div class="star" style="top:700px; left:200px;"></div>
+  <div class="star" style="top:750px; left:600px;"></div>
+  <div class="star" style="top:650px; left:950px;"></div>
+  <div class="star" style="top:300px; left:1300px;"></div>
+
+  <!-- 🔗 روابط -->
+  <h1>Møñçëf Nãîlī</h1>
+  <ul>
+    <li><a href="https://instagram.com/USERNAME" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+    <li><a href="https://facebook.com/USERNAME" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+    <li><a href="https://snapchat.com/add/USERNAME" target="_blank" class="snapchat"><i class="fab fa-snapchat"></i> Snapchat</a></li>
+    <li><a href="https://wa.me/PHONE" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
+    <li><a href="https://t.me/USERNAME" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></li>
+    <li><a href="https://www.threads.net/@USERNAME" target="_blank" class="threads"><i class="fa-brands fa-threads"></i> Threads</a></li>
+    <li><a href="tel:PHONE" class="phone"><i class="fas fa-phone"></i> إتصل بي</a></li>
+    <li><a href="mailto:EMAIL@example.com" class="email"><i class="fas fa-envelope"></i> Email</a></li>
+  </ul>
 
 </body>
 </html>
