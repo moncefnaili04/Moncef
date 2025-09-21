@@ -10,7 +10,7 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: #000; /* نخلي الخلفية سوداء باش يبان التأثير مليح */
+      background: #000; /* الخلفية سوداء باش يبان glow */
       padding: 50px;
       color: white;
     }
@@ -32,7 +32,9 @@
       font-size: 20px;
       text-decoration: none;
       transition: 0.3s;
-      background: transparent;  /* الخلفية شفافة */
+      background: transparent;
+      border: 2px solid #fff;   /* الإطار أبيض */
+      color: #fff;              /* النص أبيض */
       position: relative;
       z-index: 0;
     }
@@ -40,18 +42,15 @@
       margin-right: 10px;
     }
 
-    /* تخصيص الألوان */
-    .instagram { border: 2px solid #E1306C; color: #E1306C; }
-    .facebook  { border: 2px solid #1877F2; color: #1877F2; }
-    .snapchat  { border: 2px solid #FFFC00; color: #FFFC00; }
-    .whatsapp  { border: 2px solid #25D366; color: #25D366; }
-    .telegram  { border: 2px solid #0088cc; color: #0088cc; }
-    .threads   { border: 2px solid #000000; color: #ffffff; }
-    .phone     { border: 2px solid #444; color: #aaa; }
-    .email     { border: 2px solid #EA4335; color: #EA4335; }
-
-    /* تأثير glow */
-    a::before {
+    /* Glow مخصص لكل تطبيق */
+    .instagram::before,
+    .facebook::before,
+    .snapchat::before,
+    .whatsapp::before,
+    .telegram::before,
+    .threads::before,
+    .phone::before,
+    .email::before {
       content: "";
       position: absolute;
       top: -2px;
@@ -59,16 +58,25 @@
       right: -2px;
       bottom: -2px;
       border-radius: 12px;
-      background: linear-gradient(45deg, #ff0000, #00f, #0ff, #f0f);
       z-index: -1;
-      filter: blur(8px);
-      opacity: 0.7;
+      filter: blur(10px);
+      opacity: 0.8;
       animation: neonGlow 3s linear infinite;
     }
 
+    .instagram::before { background: #E1306C; }
+    .facebook::before  { background: #1877F2; }
+    .snapchat::before  { background: #FFFC00; }
+    .whatsapp::before  { background: #25D366; }
+    .telegram::before  { background: #0088cc; }
+    .threads::before   { background: #ffffff; }
+    .phone::before     { background: #888; }
+    .email::before     { background: #EA4335; }
+
     @keyframes neonGlow {
-      0%   { filter: blur(8px) hue-rotate(0deg); }
-      100% { filter: blur(8px) hue-rotate(360deg); }
+      0%   { opacity: 0.5; }
+      50%  { opacity: 1; }
+      100% { opacity: 0.5; }
     }
 
     /* Hover */
@@ -78,7 +86,7 @@
   </style>
 </head>
 <body>
-  <h1>Møñçëf Nãîlī1</h1>
+  <h1>Møñçëf Nãîliii</h1>
   <ul>
     <li><a href="https://instagram.com/USERNAME" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
     <li><a href="https://facebook.com/USERNAME" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
