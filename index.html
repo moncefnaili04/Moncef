@@ -24,27 +24,33 @@
       margin: 15px 0;
     }
     a {
-      display: inline-block;
-      width: 220px;
-      padding: 12px;
-      border-radius: 8px;
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    a i {
-      margin-right: 10px;
-    }
-    /* ألوان التطبيقات */
-    .instagram { background: #E1306C; }
-    .facebook { background: #1877F2; }
-    .snapchat { background: #FFFC00; color: #000; }
-    .whatsapp { background: #25D366; }
-    .telegram { background: #0088cc; }
-    .threads { background: #000000; }
-    .phone { background: #444; }
-    .email { background: #EA4335; }
+  display: inline-block;
+  width: 220px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  background: transparent;     /* الخلفية شفافة */
+  border: 2px solid transparent;
+  color: #000;                 /* اللون الافتراضي أسود */
+}
+
+/* ألوان التطبيقات (إطار + نص فقط) */
+.instagram { border-color: #E1306C; color: #E1306C; }
+.facebook  { border-color: #1877F2; color: #1877F2; }
+.snapchat  { border-color: #FFFC00; color: #FFFC00; }
+.whatsapp  { border-color: #25D366; color: #25D366; }
+.telegram  { border-color: #0088cc; color: #0088cc; }
+.threads   { border-color: #000000; color: #000000; }
+.phone     { border-color: #444;    color: #444; }
+.email     { border-color: #EA4335; color: #EA4335; }
+
+/* Hover = توهج بنفس اللون */
+a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px currentColor;
+}
     
     /* تأثير hover */
     a:hover {
