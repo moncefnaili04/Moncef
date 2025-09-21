@@ -13,23 +13,24 @@
 
   <style>
     /* 🌌 خلفية الصفحة */
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: url('6adda513a5f79f23d2d018efe64ae72e.jpg') no-repeat center center fixed;
-      background-size: cover; 
-      font-family: 'Cairo', sans-serif;
-      color: white;
-    }
+body {
+  margin: 0;
+  height: 100vh;             /* يغطي الشاشة كاملة */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* نوسط المحتوى عمودياً */
+  align-items: center;       /* نوسط أفقياً */
+  overflow: hidden;          /* يمنع أي Scroll */
+  background: url('6adda513a5f79f23d2d018efe64ae72e.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Lobster', cursive;
+  color: white;
+}
 
     /* 🟡 العنوان */
     h1 {
   font-family: 'Lobster', cursive; /* خط مزخرف */
-  font-size: 40px;
+  font-size: 90px;
   color: #FFD700;
   text-align: center;
   text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
@@ -70,7 +71,7 @@
 a i {
   width: 25px;         /* نخلي عرض ثابت */
   height: 25px;        /* نخلي طول ثابت */
-  font-size: 40px;     /* حجم موحد */
+  font-size: 30px;     /* حجم موحد */
   display: flex;       
   align-items: center; 
   justify-content: center;
