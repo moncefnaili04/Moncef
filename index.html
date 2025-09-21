@@ -2,100 +2,55 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>روابطي الرسمية</title>
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <title>أزرار مع خلفية قمر</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: #000; /* الخلفية سوداء باش يبان glow */
-      padding: 50px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') 
+                  no-repeat center center fixed;
+      background-size: cover;
       color: white;
+      font-family: Arial, sans-serif;
     }
-    h1 {
-      margin-bottom: 30px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 15px 0;
-    }
+
     a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: 220px;
-      padding: 12px;
-      border-radius: 12px;
-      font-size: 20px;
+      padding: 14px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 22px;
       text-decoration: none;
       transition: 0.3s;
-      background: transparent;
-      border: 2px solid #fff;   /* الإطار أبيض */
-      color: #fff;              /* النص أبيض */
-      position: relative;
-      z-index: 0;
-    }
-    a i {
-      margin-right: 10px;
+      border: 2px solid white;
+      color: white;
+      gap: 10px;
     }
 
-    /* Glow مخصص لكل تطبيق */
-    .instagram::before,
-    .facebook::before,
-    .snapchat::before,
-    .whatsapp::before,
-    .telegram::before,
-    .threads::before,
-    .phone::before,
-    .email::before {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      border-radius: 12px;
-      z-index: -1;
-      filter: blur(10px);
-      opacity: 0.8;
-      animation: neonGlow 3s linear infinite;
-    }
-
-    .instagram::before { background: #E1306C; }
-    .facebook::before  { background: #1877F2; }
-    .snapchat::before  { background: #FFFC00; }
-    .whatsapp::before  { background: #25D366; }
-    .telegram::before  { background: #0088cc; }
-    .threads::before   { background: #ffffff; }
-    .phone::before     { background: #888; }
-    .email::before     { background: #EA4335; }
-
-    @keyframes neonGlow {
-      0%   { opacity: 0.5; }
-      50%  { opacity: 1; }
-      100% { opacity: 0.5; }
-    }
-
-    /* Hover */
     a:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 0 20px currentColor;
     }
+
+    .instagram { color: #E4405F; }
+    .facebook { color: #1877F2; }
+    .whatsapp { color: #25D366; }
+    .tiktok { color: #fff; }
   </style>
 </head>
 <body>
-  <h1>Møñçëf Nãîliii</h1>
-  <ul>
-    <li><a href="https://instagram.com/USERNAME" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
-    <li><a href="https://facebook.com/USERNAME" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
-    <li><a href="https://snapchat.com/add/USERNAME" target="_blank" class="snapchat"><i class="fab fa-snapchat"></i> Snapchat</a></li>
-    <li><a href="https://wa.me/PHONE" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp</a></li>
-    <li><a href="https://t.me/USERNAME" target="_blank" class="telegram"><i class="fab fa-telegram"></i> Telegram</a></li>
-    <li><a href="https://www.threads.net/@USERNAME" target="_blank" class="threads"><i class="fa-brands fa-threads"></i> Threads</a></li>
-    <li><a href="tel:PHONE" class="phone"><i class="fas fa-phone"></i> إتصل بي</a></li>
-    <li><a href="mailto:EMAIL@example.com" class="email"><i class="fas fa-envelope"></i> Email</a></li>
-  </ul>
+
+  <a href="#" class="instagram">📸 Instagram</a>
+  <a href="#" class="facebook">📘 Facebook</a>
+  <a href="#" class="whatsapp">💬 WhatsApp</a>
+  <a href="#" class="tiktok">🎵 TikTok</a>
+
 </body>
 </html>
