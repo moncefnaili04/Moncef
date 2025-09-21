@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>روابطي الرسمية</title>
-  <!-- Font Awesome -->
+
+  <!-- ✅ أيقونات Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-  <!-- Google Font -->
+
+  <!-- ✅ خط جميل من Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+
   <style>
+    /* 🌌 خلفية الصفحة */
     body {
-      ...
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('6adda513a5f79f23d2d018efe64ae72e.jpg') no-repeat center center fixed;
+      background-size: cover; 
+      font-family: 'Cairo', sans-serif;
+      color: white;
     }
 
+    /* 🟡 العنوان */
     h1 {
-      font-family: 'Cairo', sans-serif;
       font-size: 36px;
       font-weight: bold;
-      color: #FFD700;
+      color: #FFD700; /* ذهبي */
       text-align: center;
-      text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
+      text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500; /* توهج */
       margin-bottom: 40px;
     }
 
+    /* 📋 القائمة الرئيسية */
     ul {
       list-style: none;
       padding: 0;
@@ -30,25 +44,31 @@
     li {
       margin: 15px 0;
     }
+
+    /* 🟦 الأزرار (الإطارات) */
     a {
-      display: inline-block;
-      width: 220px;
-      padding: 12px;
-      border-radius: 12px;
-      font-size: 20px;
+      display: flex;                  /* باش الأيقونة + النص يكونوا في خط واحد */
+      align-items: center;            /* وسط عمودي */
+      justify-content: center;        /* وسط أفقي */
+      width: 220px;                   /* العرض */
+      height: 55px;                   /* الطول */
+      border-radius: 12px;            /* الزوايا مدورة */
+      font-size: 18px;                /* حجم الكتابة */
+      font-weight: bold;              /* كتابة خسينة */
       text-decoration: none;
-      transition: 0.3s;
       background: transparent;
-      border: 2px solid #fff;   /* الإطار أبيض */
-      color: #fff;              /* النص أبيض */
+      border: 2px solid #fff;         /* الإطار أبيض */
+      color: #fff;                    /* النص أبيض */
       position: relative;
       z-index: 0;
+      transition: 0.3s;
     }
     a i {
-      margin-right: 10px;
+      margin-right: 10px;             /* مسافة بين الأيقونة والكتابة */
+      font-size: 20px;                /* حجم الأيقونة */
     }
 
-    /* Glow مخصص لكل تطبيق */
+    /* 🌈 التوهج (Glow) */
     .instagram::before,
     .facebook::before,
     .snapchat::before,
@@ -70,47 +90,35 @@
       animation: neonGlow 3s linear infinite;
     }
 
-    .instagram::before { background: #E1306C; }
-    .facebook::before  { background: #1877F2; }
-    .snapchat::before  { background: #FFFC00; }
-    .whatsapp::before  { background: #25D366; }
-    .telegram::before  { background: #0088cc; }
-    .threads::before   { background: #ffffff; }
-    .phone::before     { background: #888; }
-    .email::before     { background: #EA4335; }
+    /* 🎨 ألوان Glow لكل تطبيق */
+    .instagram::before { background: #E1306C; }   /* وردي */
+    .facebook::before  { background: #1877F2; }   /* أزرق */
+    .snapchat::before  { background: #FFFC00; }   /* أصفر */
+    .whatsapp::before  { background: #25D366; }   /* أخضر */
+    .telegram::before  { background: #0088cc; }   /* سماوي */
+    .threads::before   { background: #ffffff; }   /* أبيض */
+    .phone::before     { background: #888; }      /* رمادي */
+    .email::before     { background: #EA4335; }   /* أحمر */
 
+    /* ✨ حركة التوهج */
     @keyframes neonGlow {
       0%   { opacity: 0.5; }
       50%  { opacity: 1; }
       100% { opacity: 0.5; }
     }
-a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 220px;   /* كامل نفس العرض */
-  height: 50px;   /* كامل نفس الطول */
-  border-radius: 12px;
-  font-size: 40px;
-  a {
-  font-weight: bold;  /* سميك */
-  }
-  text-decoration: none;
-  transition: 0.3s;
-  background: transparent;
-  border: 2px solid #fff;
-  color: #fff;
-  position: relative;
-  z-index: 0;
-}
-    /* Hover */
+
+    /* 🔄 حركة عند مرور الفأرة */
     a:hover {
       transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+
+  <!-- 🟡 العنوان الرئيسي -->
   <h1>Møñçëf Nãîlī</h1>
+
+  <!-- 📋 قائمة الروابط -->
   <ul>
     <li><a href="https://instagram.com/USERNAME" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
     <li><a href="https://facebook.com/USERNAME" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
@@ -121,5 +129,6 @@ a {
     <li><a href="tel:PHONE" class="phone"><i class="fas fa-phone"></i> إتصل بي</a></li>
     <li><a href="mailto:EMAIL@example.com" class="email"><i class="fas fa-envelope"></i> Email</a></li>
   </ul>
+
 </body>
 </html>
