@@ -10,8 +10,9 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      background: #f0f0f0;
+      background: #000; /* نخلي الخلفية سوداء باش يبان التأثير مليح */
       padding: 50px;
+      color: white;
     }
     h1 {
       margin-bottom: 30px;
@@ -24,34 +25,56 @@
       margin: 15px 0;
     }
     a {
-  display: inline-block;
-  width: 220px;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-  background: transparent;     /* الخلفية شفافة */
-  border: 2px solid transparent;
-  color: #000;                 /* اللون الافتراضي أسود */
-}
+      display: inline-block;
+      width: 220px;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+      background: transparent;  /* الخلفية شفافة */
+      position: relative;
+      z-index: 0;
+    }
+    a i {
+      margin-right: 10px;
+    }
 
-/* ألوان التطبيقات (إطار + نص فقط) */
-.instagram { border-color: #E1306C; color: #E1306C; }
-.facebook  { border-color: #1877F2; color: #1877F2; }
-.snapchat  { border-color: #FFFC00; color: #FFFC00; }
-.whatsapp  { border-color: #25D366; color: #25D366; }
-.telegram  { border-color: #0088cc; color: #0088cc; }
-.threads   { border-color: #000000; color: #000000; }
-.phone     { border-color: #444;    color: #444; }
-.email     { border-color: #EA4335; color: #EA4335; }
+    /* تخصيص الألوان */
+    .instagram { border: 2px solid #E1306C; color: #E1306C; }
+    .facebook  { border: 2px solid #1877F2; color: #1877F2; }
+    .snapchat  { border: 2px solid #FFFC00; color: #FFFC00; }
+    .whatsapp  { border: 2px solid #25D366; color: #25D366; }
+    .telegram  { border: 2px solid #0088cc; color: #0088cc; }
+    .threads   { border: 2px solid #000000; color: #ffffff; }
+    .phone     { border: 2px solid #444; color: #aaa; }
+    .email     { border: 2px solid #EA4335; color: #EA4335; }
 
-/* Hover = توهج بنفس اللون */
-a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px currentColor;
-}
-    
+    /* تأثير glow */
+    a::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 12px;
+      background: linear-gradient(45deg, #ff0000, #00f, #0ff, #f0f);
+      z-index: -1;
+      filter: blur(8px);
+      opacity: 0.7;
+      animation: neonGlow 3s linear infinite;
+    }
+
+    @keyframes neonGlow {
+      0%   { filter: blur(8px) hue-rotate(0deg); }
+      100% { filter: blur(8px) hue-rotate(360deg); }
+    }
+
+    /* Hover */
+    a:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
