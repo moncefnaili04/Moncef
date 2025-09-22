@@ -26,15 +26,22 @@ body {
   font-family: 'Lobster', cursive;
   color: white;
   padding-top: 10px;   /* زدنا هذي باش نطلعو العنوان للفوق */
+  body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4); /* ضل خفيف */
+  z-index: -1;
+  }
 }
 
     /* 🟡 العنوان */
     h1 {
-  font-family: 'Lobster', cursive; /* خط مزخرف */
-  font-size: 70px;
-  color: #FFD;
+/* خط مزخرف */
+ font-family: 'Great Vibes', cursive;
+color: #FFD700; /* دهبي */
+text-shadow: 0 0 20px #FFD700, 0 0 40px #FFA500; font-size: 70px;
   text-align: center;
-  text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500;
       margin: 0;           /* باش مايبقاش فيه فراغ من الفوق */
 margin-bottom: -20px; /* نخلي مسافة صغيرة بين العنوان والمربعات */
   position: relative;
@@ -67,6 +74,7 @@ margin-bottom: -20px; /* نخلي مسافة صغيرة بين العنوان و
       position: relative;
       z-index: 0;
       transition: 0.3s;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.4);
     }
     a i {
       margin-right: 10px;             /* مسافة بين الأيقونة والكتابة */
